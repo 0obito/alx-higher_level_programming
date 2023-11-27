@@ -1,1 +1,1 @@
-This is the first project of sprint 2, it's Python this time, let's gooo !!!
+This is SPRINT 2, it's Python this time, let's gooo !!!
