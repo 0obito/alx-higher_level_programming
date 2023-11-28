@@ -2,4 +2,4 @@
 alpha = ord('a')
 while alpha <= ord('z'):
     print("{}".format(chr(alpha)), end='')
-    alpha=alpha+1
+    alpha = alpha+1
