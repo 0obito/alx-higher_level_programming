@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 alpha = ord('a')
 while alpha <= ord('z'):
-    print(f"{alpha:c}", end = '')
+    print("{}".format(chr(alpha)), end = '')
     alpha = alpha + 1
