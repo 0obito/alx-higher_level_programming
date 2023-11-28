@@ -3,6 +3,10 @@
 def uppercase(str):
 
     i = 0
+
+    if len(str) == 0:
+        print("")
+
     while i < len(str):
 
         alpha = str[i]
