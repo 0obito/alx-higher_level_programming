@@ -1,21 +1,13 @@
 #!/usr/bin/python3
+def to_uper(character):
+    if ord(character) >= 97 and ord(character) <= 122:
+        return (ord(character) - 32)
+    else:
+        return ord(character)
 
-def uppercase(str):
+def uppercase(string):
+    string_new = ""
+    for character in string:
+        string_new += "%c" % to_uper(character)
+    print("{:s}".format(string_new))
 
-    i = 0
-
-    if len(str) == 0:
-        print("")
-
-    while i < len(str):
-
-        alpha = str[i]
-        if ord(str[i]) <= ord('z') and ord(str[i]) >= ord('a'):
-            alpha = chr(ord(str[i]) - 32)
-
-        if i == len(str) - 1:
-            print("{}".format(alpha))
-        else:
-            print("{}".format(alpha), end='')
-
-        i = i + 1
