@@ -7,4 +7,4 @@ def print_reversed_list_integer(my_list=[]):
     rev.reverse()
 
     for element in rev:
-        print("{}".format(element))
+        print("{:d}".format(element))
