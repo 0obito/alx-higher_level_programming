@@ -15,11 +15,13 @@ class Square:
 
         Args:
             size (int): The size of one side of the square.
-            position (tuple, optional): The position of the square. Defaults to (0, 0).
+            position (tuple, optional): The position of the square.
 
         Raises:
-            TypeError: If size is not an integer or if position is not a tuple of two positive integers.
-            ValueError: If size is less than 0 or if position contains non-positive integers.
+            TypeError: If size is not an integer or
+                if position is not a tuple of two positive integers.
+            ValueError: If size is less than 0 or
+                if position contains non-positive integers.
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
@@ -78,11 +80,12 @@ class Square:
             for k in range(self.__position[1]):
                 print("")
             for x in range(self.__size):
-                for l in range(self.__position[0]):
+                for y in range(self.__position[0]):
                     print(" ", end="")
-                for y in range(self.__size):
+                for z in range(self.__size):
                     print("#", end="")
                 print("")
+
     @property
     def position(self):
         """Retrieve the position of the square."""
