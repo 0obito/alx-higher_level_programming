@@ -16,13 +16,9 @@ class Square:
             sizee (int): The size of one side of the square.
 
         """
-        try:
+        if type(sizee) is not int:
+            raise TypeError("size must be an integer")
+        elif sizee < 0:
+            raise ValueError("size must be >= 0")
+        else:
             self.__size = sizee
-            if type(sizee) is not int:
-                raise TypeError("size must be an integer")
-            if sizee < 0:
-                raise ValueError("size must be >= 0")
-        except ValueError as ve:
-            print(ve)
-        except TypeError as te:
-            print(te)
