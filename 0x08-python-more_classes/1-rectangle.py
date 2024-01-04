@@ -12,8 +12,8 @@ class Rectangle:
            Instantiation with
            optional width and height
         """
-        self.__width = width
         self.__height = height
+        self.__width = width
 
     @property
     def width(self):
