@@ -1,16 +1,13 @@
 #!/usr/bin/python3
 """Defines a class Rectangle"""
 
-
 class Rectangle:
     """
-       Class that defines
-       properties of a rectangle.
+       Class that defines properties of a rectangle.
     """
     def __init__(self, width=0, height=0):
         """
-           Instantiation with
-           optional width and height
+           Instantiation with optional width and height.
         """
         self.__height = height
         self.__width = width
