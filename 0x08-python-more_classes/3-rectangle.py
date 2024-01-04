@@ -77,10 +77,11 @@ class Rectangle:
         for _ in range(self.__height):
             rectangle_str += '#' * self.__width + '\n'
 
-        return rectangle_str.rstrip()  # Remove the trailing newline at the end
+        return rectangle_str.rstrip()
 
     def __repr__(self):
         """
         Returns a string representation of the rectangle.
         """
-        return "<{}.{} object at {}>".format(__name__, self.__class__.__name__, hex(id(self)))
+        return "<{}.{} object at {}>".format(
+            __name__, self.__class__.__name__, hex(id(self)))
