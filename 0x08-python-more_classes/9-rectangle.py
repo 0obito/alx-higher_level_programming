@@ -120,4 +120,4 @@ class Rectangle:
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            return Rectangle(size, size)
+            return Rectangle(width=size, height=size)
