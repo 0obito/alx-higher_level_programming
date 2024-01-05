@@ -115,6 +115,5 @@ class Rectangle:
         """
         Returns a new Rectangle instance with width == height == size.
         """
-        raise ValueError("size must be >= 0")
         new_instance = cls(size, size)
         return new_instance
