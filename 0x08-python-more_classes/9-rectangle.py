@@ -120,8 +120,8 @@ class Rectangle:
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            cls.width = size
-            cls.height = size
-
             square_instance = cls()
+            square_instance.width = size
+            square_instance.height = size
+
             return square_instance
