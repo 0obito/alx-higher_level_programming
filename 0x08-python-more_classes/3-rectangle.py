@@ -78,10 +78,3 @@ class Rectangle:
             rectangle_str += '#' * self.__width + '\n'
 
         return rectangle_str.rstrip()
-
-    def __repr__(self):
-        """
-        Returns a string representation of the rectangle.
-        """
-        return "<{}.{} object at {}>".format(
-            __name__, self.__class__.__name__, hex(id(self)))
