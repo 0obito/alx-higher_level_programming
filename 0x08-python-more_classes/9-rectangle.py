@@ -115,10 +115,6 @@ class Rectangle:
         """
         Returns a new Rectangle instance with width == height == size.
         """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            new_instance = cls(size, size)
-            return new_instance
+        raise ValueError("size must be >= 0")
+        new_instance = cls(size, size)
+        return new_instance
