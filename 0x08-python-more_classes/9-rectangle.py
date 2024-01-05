@@ -120,4 +120,5 @@ class Rectangle:
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            return (cls(size, size))
+            new_instance = cls(size, size)
+            return new_instance
