@@ -93,5 +93,4 @@ class Rectangle:
         Print the message Bye rectangle... when an instance is deleted
         """
         print("Bye rectangle...")
-        #!/usr/bin/python3
         Rectangle.number_of_instances -= 1
