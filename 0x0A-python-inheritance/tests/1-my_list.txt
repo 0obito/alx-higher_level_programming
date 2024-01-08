@@ -1,0 +1,30 @@
+"""
+Test for MyList class
+"""
+
+from my_module import MyList
+
+# Test case 1: Testing print_sorted method
+my_list = MyList([4, 2, 7, 1, 9, 5])
+my_list.print_sorted()
+# Expected output: "1 2 4 5 7 9"
+
+# Test case 2: Testing print_sorted with an empty list
+empty_list = MyList([])
+empty_list.print_sorted()
+# Expected output: ""
+
+# Test case 3: Testing print_sorted with negative numbers
+negative_list = MyList([-4, -2, -7, -1, -9, -5])
+negative_list.print_sorted()
+# Expected output: "-9 -7 -5 -4 -2 -1"
+
+# Test case 4: Testing print_sorted with duplicate numbers
+duplicate_list = MyList([4, 2, 7, 1, 9, 5, 1, 2, 4])
+duplicate_list.print_sorted()
+# Expected output: "1 1 2 2 4 4 5 7 9"
+
+# Test case 5: Testing print_sorted with a single-element list
+single_element_list = MyList([42])
+single_element_list.print_sorted()
+# Expected output: "42"
