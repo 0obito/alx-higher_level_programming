@@ -8,8 +8,4 @@ class Square(Rectangle):
     def __init__(self, size):
         """Instantiation with size"""
         self.__size = size
-        super().__init__(size, size)
-
-    def area(self):
-        """area method implementation"""
-        return self.__size * self.__size
+        super().__init__(self.__size, self.__size)
