@@ -7,8 +7,7 @@
 class MyList(list):
     """
     MyList(list): a class that inherits from a list.
-    Paramerters:
-      - list: a list.
     """
     def print_sorted(self):
+        """Method to print the list in ascending order"""
         print(sorted(self))
