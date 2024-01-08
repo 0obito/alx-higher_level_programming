@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+"""Module for is_same_class.py"""
+
+
+def is_same_class(obj, a_class):
+    """Function that checks if an object is an instance of a class"""
+    return(isinstance(obj, a_class))
