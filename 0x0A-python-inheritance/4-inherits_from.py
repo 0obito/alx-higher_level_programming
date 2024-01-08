@@ -6,4 +6,4 @@ def inherits_from(obj, a_class):
     """Function that checks if an object is an instance of a sub-class
        of the given class.
     """
-    return issubclass(obj, a_class)
+    return issubclass(type(obj), a_class)
