@@ -7,5 +7,5 @@ class Square(Rectangle):
     """A class that inherits from Rectange class"""
     def __init__(self, size):
         """Instantiation with size"""
+        super().__init__(size, size)
         self.__size = size
-        super().__init__(self.__size, self.__size)
