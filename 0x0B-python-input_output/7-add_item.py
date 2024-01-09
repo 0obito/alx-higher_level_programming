@@ -12,7 +12,6 @@ if __name__ == "__main__":
     except FileNotFoundError:
         mylist = []
 
-    for item in sys.argv[1:]:
-        mylist.append(item)
+    mylist.extend(sys.argv[1:])
 
     save(mylist, "add_item.json")
