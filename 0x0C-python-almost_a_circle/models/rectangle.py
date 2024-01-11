@@ -2,6 +2,7 @@
 """rectangle module"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """Rectangle class"""
 
@@ -68,3 +69,21 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """Public method to calculate the area"""
+        return self.__width * self.__height
+
+    def display(self):
+        """Public method """
+        for h in range(self.__height):
+            for w in range(self.__width):
+                print("#", end="")
+            print("")
+
+    def __str__(self):
+        """string magic method"""
+        return (
+            f"[Rectangle] ({self.id}) {self.__x}/{self.__y} "
+            f"- {self.__width}/{self.__height}."
+        )
