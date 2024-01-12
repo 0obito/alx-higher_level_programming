@@ -91,3 +91,19 @@ class Rectangle(Base):
             f"[Rectangle] ({self.id}) {self.__x}/{self.__y} "
             f"- {self.__width}/{self.__height}."
         )
+
+    def update(self, *args):
+        """Public method: assigns an argument to each attribute"""
+        i = 0
+        for arg in args:
+            if i == 0:
+                self.id = arg
+            if i == 1:
+                self.__width = arg
+            if i == 2:
+                self.__height = arg
+            if i == 3:
+                self.__x = arg
+            if i == 4:
+                self.__y = arg
+            i += 1
