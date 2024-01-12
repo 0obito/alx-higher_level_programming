@@ -89,21 +89,35 @@ class Rectangle(Base):
         """string magic method"""
         return (
             f"[Rectangle] ({self.id}) {self.__x}/{self.__y} "
-            f"- {self.__width}/{self.__height}."
+            f"- {self.__width}/{self.__height}"
         )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Public method: assigns an argument to each attribute"""
-        i = 0
-        for arg in args:
-            if i == 0:
-                self.id = arg
-            if i == 1:
-                self.__width = arg
-            if i == 2:
-                self.__height = arg
-            if i == 3:
-                self.__x = arg
-            if i == 4:
-                self.__y = arg
-            i += 1
+        if args:
+            i = 0
+            for arg in args:
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.__width = arg
+                if i == 2:
+                    self.__height = arg
+                if i == 3:
+                    self.__x = arg
+                if i == 4:
+                    self.__y = arg
+                i += 1
+
+        elif kwargs:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.__width = value
+                if key == "height":
+                    self.__height = value
+                if key == "x":
+                    self.__x = value
+                if key == "y":
+                    self.__y = value
