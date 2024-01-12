@@ -75,8 +75,12 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """Public method """
+        """Public method to display the rectangle"""
+        for i in range(self.__y):
+            print("")
         for h in range(self.__height):
+            for j in range(self.__x):
+                print(" ", end="")
             for w in range(self.__width):
                 print("#", end="")
             print("")
