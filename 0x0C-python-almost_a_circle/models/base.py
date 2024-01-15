@@ -90,7 +90,10 @@ class Base:
                 csv_reader = csv.reader(csvfile)
                 headers = next(csv_reader)
                 for row in csv_reader:
-                    data_dict = {header: int(value) for header, value in zip(headers, row)}
+                    data_dict = {
+                        header: int(value) for header,
+                        value in zip(headers, row)
+                    }
                     instance = cls.create(**data_dict)
                     instances_list.append(instance)
         except FileNotFoundError:
