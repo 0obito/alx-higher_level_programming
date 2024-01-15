@@ -50,7 +50,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Class method: returns an instance with all attributes already set"""
-        dummy_instance = cls(1, 1, 1, 1)
+        dummy_instance = cls(1, 2)
         dummy_instance.update(**dictionary)
         return dummy_instance
 
