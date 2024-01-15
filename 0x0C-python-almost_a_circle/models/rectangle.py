@@ -123,7 +123,9 @@ class Rectangle(Base):
                     self.__y = value
 
     def to_dictionary(self):
-        """Public method: returns the dictionary representation of a Rectangle"""
+        """Public method: returns the dictionary
+         representation of a Rectangle
+        """
         return {
             'x': self.__x,
             'y': self.__y,
