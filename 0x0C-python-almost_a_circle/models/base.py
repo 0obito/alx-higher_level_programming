@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """base module"""
 import json
+import csv
 
 
 class Base:
@@ -67,3 +68,32 @@ class Base:
                 return instances_list
         except FileNotFoundError:
             return instances_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Class method: saves instances to a file in CSV format"""
+        if list_objs is None:
+            list_objs = []
+
+        dicts_list = [obj.to_dictionary() for obj in list_objs]
+
+        with open(f"{cls.__name__}.csv", 'w', newline='') as csvfile:
+            csv_writer = csv.writer(csvfile)
+            csv_writer.writerows(dicts_list)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Class method: loads instances from a CSV format file"""
+        instances_list = []
+        try:
+            with open(f"{cls.__name__}.csv", 'r', newline='') as csvfile:
+                csv_reader = csv.reader(csvfile)
+                headers = next(csv_reader)
+                for row in csv_reader:
+                    data_dict = {header: int(value) for header, value in zip(headers, row)}
+                    instance = cls.create(**data_dict)
+                    instances_list.append(instance)
+        except FileNotFoundError:
+            pass
+
+        return instances_list
