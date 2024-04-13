@@ -11,7 +11,7 @@ if __name__ == "__main__":
                                  passwd=sys.argv[2],
                                  db=sys.argv[3])
     cursor = connection.cursor()
-    sql_query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id"
+    sql_query = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC"
     cursor.execute(sql_query)
     many = cursor.fetchall()
     for one in many:
