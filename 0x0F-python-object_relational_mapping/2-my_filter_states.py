@@ -12,8 +12,9 @@ if __name__ == "__main__":
                                  passwd=sys.argv[2],
                                  db=sys.argv[3])
     cursor = connection.cursor()
-    sql_query = "SELECT * FROM states \
-                WHERE name = '{}' ORDER BY id ASC".format(sys.argv[4])
+    sql_query = """SELECT * FROM states 
+                WHERE name = '{}' ORDER BY id ASC
+                """.format(sys.argv[4])
     cursor.execute(sql_query)
     many = cursor.fetchall()
     for one in many:
